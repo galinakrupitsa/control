@@ -1,9 +1,6 @@
 package org.example.hello1;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Controller2 {
@@ -14,5 +11,6 @@ public class Controller2 {
 {   String exclamations = "!".repeat(Math.max(0, level));
     return "hello, " + user + exclamations  ;
 }
+
 
 }
