@@ -11,4 +11,8 @@ public class UserService {
     public int addNumbers(int a, int b) {
         return a + b;
     }
+
+    public String hello(String name) {
+        return "Hello, " + name + "!";
+    }
 }
