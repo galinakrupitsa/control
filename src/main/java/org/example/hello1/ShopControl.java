@@ -12,10 +12,16 @@ public class ShopControl {
 
     }
 
-    @PostMapping("shopper/<shopperId>/orders")
+
+    @PostMapping("shopper/{shopperId}/orders")
     public String getShopperId (@PathVariable String shopperId,
                            @RequestParam(required = false) Double totalPriceLess) {
         return shopService.countOfoOrders(shopperId);
     }
 
+    @GetMapping("shopper/{shopperId}/money")
+    public String getMetod (@PathVariable String shopperId,
+                                @RequestParam(required = false) Double totalPriceLess) {
+        return shopService.metod(shopperId);
+    }
 }
