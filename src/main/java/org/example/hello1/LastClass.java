@@ -7,9 +7,9 @@ public class LastClass {
 
         // геттеры и сеттеры
         public String getName() { return name; }
-        public void setName(String name) { this.name = name; }
+        public void setName(String id) { this.name = name; }
 
         public String getAddress() { return address; }
-        public void setAddress(String address) { this.address = address; }
+        public void setAddress(String quantity) { this.address = address; }
     }
 
