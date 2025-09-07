@@ -9,9 +9,9 @@ import java.util.Map;
 @RequestMapping("/api")
 public class LastController {
 
-    private final LastController lastController;
-    public LastController(LastController lastController) {
-        this.lastController = lastController;
+    private final LastService lastService;
+    public LastController(LastService lastService) {
+        this.lastService = lastService;
 
     }
     @PostMapping("language/{languageID}/publishers")
@@ -21,7 +21,7 @@ public class LastController {
             @RequestParam("quantity") int quantity,
             @RequestBody LastClass lastClass) {
 
-        Map<String, Object> response = lastController.createPublisher(languageID, id, quantity, lastClass).getBody();
+        Map<String, Object> response = lastService.createPublisher(languageID, id, quantity, lastClass);
         return ResponseEntity.ok(response);
     }
 }
