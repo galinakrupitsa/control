@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class LastService {
 
-        public Map<String, Object> createPublisher(Long languageId, Long id, int quantity, LastClass lastClass) {
+        public Map<String, Object> createPublisher(Long languageId, Long id, Long quantity, LastClass lastClass) {
             return Map.of(
                     "languageId", languageId,
                     "ID", id,

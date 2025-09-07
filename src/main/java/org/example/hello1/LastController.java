@@ -18,7 +18,7 @@ public class LastController {
     public ResponseEntity<Map<String, Object>> createPublisher(
             @PathVariable Long languageID,
             @RequestParam("ID") Long id,
-            @RequestParam("quantity") int quantity,
+            @RequestParam("quantity") Long quantity,
             @RequestBody LastClass lastClass) {
 
         Map<String, Object> response = lastService.createPublisher(languageID, id, quantity, lastClass);
